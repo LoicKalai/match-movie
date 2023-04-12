@@ -1,10 +1,15 @@
 import React from "react";
 import "../../src/index.css";
+import Logo from "../components/Logo"
 import Footer from "../components/Footer";
+import { Link } from 'react-router-dom';
+
+
 
 function Home() {
   return (
     <>
+    <Logo />
       <div className="contain-start text-[20px] leading-[2rem] h-[82vh] flex flex-col items-center justify-center pb-[150px]">
         <p className="">
           Avec{" "}
@@ -22,16 +27,19 @@ function Home() {
         </p>
 
         <p className="">
-          Une fois que vous avez répondu aux questions, on vous passe des films,
+          Une fois que vous avez répondu aux questions, nous vous proposons des films,
           à vous de voir si ça match ou pas! 💙 x ❎
         </p>
         <p className="pb-[2%]">
           Tous les films Liké seront enregistrés pour pouvoir ensuite choisir
           celui que vous voudrez!
         </p>
-        <button className="border-[1px] border-[black] bg-[#0880C3] px-[10px] py-[5px]  rounded-[10px] font-[Oswald] font-bold">
-          Commencer!
-        </button>
+        
+        <Link to= "/Questions">
+          <button className="border-[1px] border-[black] bg-[#0880C3] px-[10px] py-[5px]  rounded-[10px] font-[Oswald] font-bold">
+            Commencer!
+          </button>
+        </Link>
       </div>
       <Footer />
     </>

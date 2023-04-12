@@ -7,7 +7,7 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 function Footer() {
   return (
     <div>
-      <footer className="border-t-[3px] border-[black] flex justify-center font-bold">
+      <footer className="border-t-[1px] border-[black] flex justify-center font-bold pt-[5px]">
         <p className="text-center pr-[15px]">
           &copy;{new Date().getFullYear()} -{" "}
           <a
@@ -21,11 +21,11 @@ function Footer() {
           - Tous droits réservés
         </p>
         <a href="https://github.com/LoicKalai" target="_blank" rel="noreferrer">
-          <p className="flex items-end">
+          <p>
             <FontAwesomeIcon
               icon={faGithub}
               style={{ color: "#000000" }}
-              className="w-[20px] h-[20px]"
+              className="w-[20px] h-[20px] hover:!text-[#0880c3] pt-[3px]"
             />
           </p>
         </a>
@@ -34,12 +34,13 @@ function Footer() {
           href="https://www.linkedin.com/in/lo%C3%AFc-kalai/"
           target="_blank"
           rel="noreferrer"
+          className="pl-[5px]"
         >
-          <p className="pl-[5px]">
+          <p>
             <FontAwesomeIcon
               icon={faLinkedin}
               style={{ color: "#000000" }}
-              className="w-[20px] h-[20px] flex items-end"
+              className="w-[20px] h-[20px] hover:!text-[#0880c3] pt-[3px]"
             />
           </p>
         </a>
