@@ -36,7 +36,7 @@ function Home() {
         </p>
         
         <Link to= "/Questions">
-          <button className="border-[1px] border-[black] bg-[#0880C3] px-[10px] py-[5px]  rounded-[10px] font-[Oswald] font-bold">
+          <button className="border-[1px] border-[black] bg-[#0880C3] px-[10px] py-[5px]  rounded-[10px] font-[Oswald] font-bold text-[whitesmoke] hover:text-[black]">
             Commencer!
           </button>
         </Link>
