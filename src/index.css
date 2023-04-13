@@ -7,14 +7,13 @@
     src: url(./assets/font/Oswald/static/Oswald-Bold.ttf);
 }
 
-body{
+body {
 
-    background-color: #e2e2e2 ;
+    background-color: #e2e2e2;
     min-height: 100vh;
 }
 
 h1 {
     -webkit-text-stroke: 0.5px #0880C3;
     text-stroke: 0.5px #0880C3;
-    }
-      
+}
