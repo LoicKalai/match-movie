@@ -23,7 +23,7 @@ function Questions() {
         </div>
         {/* /Nav Logo & Home*/}
 
-        <div className="bloc-questions w-full h-[36.5rem] border-[red] border-[1px]">
+        <div className="bloc-questions w-full h-[36.5rem]">
             <h2 className='font-[Oswald] font-bold text-[24px] pl-[25px] pb-[20px]'>Trouvez le film que vous voulez voir 🎥</h2>
             
             {/*Placer le bloc question*/}
@@ -33,13 +33,16 @@ function Questions() {
                 <p className='text-question text-[20px] pb-[20px]'>Lorem lorem lorem lorem??</p>
                 {/* Question */}
 
-                <div className="contain-questions w-[70%] border-[blue] border-[2px] h-[80%]">
-                    <ul className='border-[1px] border-[green] flex flex-col h-full'>
-                        <li className='border-[yellow] border-[1px] flex-1'>lorem</li>
-                        <li className='border-[yellow] border-[1px] flex-1'>lorem</li>
-                        <li className='border-[yellow] border-[1px] flex-1'>lorem</li>
-                        <li className='border-[yellow] border-[1px] flex-1'>lorem</li>
+                <div className="contain-questions w-[40%] h-[60%]">
+                    <ul className='flex flex-col h-full'>
+                        <li className='flex-1 flex items-center cursor-pointer hover:bg-[#0880c3] bg-[whitesmoke] border-b-[#e2e2e2] border-b-[2px]'><span className='pl-[15px]'>lorem</span></li>
+                        <li className='flex-1 flex items-center cursor-pointer hover:bg-[#0880c3] bg-[whitesmoke] border-b-[#e2e2e2] border-b-[2px]'><span className='pl-[15px]'>lorem</span></li>
+                        <li className='flex-1 flex items-center cursor-pointer hover:bg-[#0880c3] bg-[whitesmoke] border-b-[#e2e2e2] border-b-[2px]'><span className='pl-[15px]'>lorem</span></li>
+                        <li className='flex-1 flex items-center cursor-pointer hover:bg-[#0880c3] bg-[whitesmoke] border-b-[#e2e2e2] border-b-[2px]'><span className='pl-[15px]'>lorem</span></li>
                     </ul>
+                    <div className="place-btn w-full flex justify-center pt-[45px]">
+                        <button type='' className='font-bold font-[Oswald] bg-[#0880c3] text-[whitesmoke] border-[black] border-[1px] px-[20px] py-[5px] rounded-[10px] hover:text-[black]'>Suivant</button>
+                    </div>
                 </div> 
             </div>
         </div>
