@@ -17,3 +17,9 @@ h1 {
     -webkit-text-stroke: 0.5px #0880C3;
     text-stroke: 0.5px #0880C3;
 }
+
+
+li {
+    background-color: transparent;
+    transition: background-color 800ms;
+}
