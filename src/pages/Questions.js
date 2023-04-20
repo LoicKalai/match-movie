@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "../../src/index.css";
-
 import Logo from '../components/Logo';
 import Footer from "../components/Footer";
 import { Link } from 'react-router-dom';
 
 function Questions() {
+    const [genre, setGenre] = useState(null);
 
+    function handleSubmit(e){
+        e.preventDefault();
+        const selectedGenre = e.target.querySelector('li[name="genre"]:checked');
+        if (selectedGenre !== null) {
+          setGenre(selectedGenre.value);
+        }
+      
+    }
 
+    function handleGenreSelection(value) {
+        setGenre(value);
+    }console.log(setGenre);
     return (
         <>
 
@@ -30,19 +41,53 @@ function Questions() {
             <div className="place-contain-questions flex flex-col items-center h-[33rem]">
 
                 {/* Question */}
-                <p className='text-question text-[20px] pb-[20px]'>Lorem lorem lorem lorem??</p>
+                <p className='text-question text-[20px] pb-[20px]'>
+                    Quel genre de film voulez vous regarder?🤔
+                    {genre === 'action' && 'Quel type de film d\'action préférez vous?'}
+                    {genre === 'comedy' && 'Quel type de comédie préférez-vous ?'}
+                    {genre === 'horror' && 'Quel type de film d\'horreur préférez-vous ?'}
+                    {genre === 'romance' && 'Quel type de romance préférez-vous ?'}
+                    {genre === 'fantastique' && 'Quel type de film fantastique préférez-vous ?'}
+                    {genre === 'science-fi' && 'Quel type de film de science-fiction préférez-vous ?'}
+
+                </p>
                 {/* Question */}
 
                 <div className="contain-questions w-[40%] h-[60%]">
-                    <ul className='flex flex-col h-full'>
-                        <li className='flex-1 flex items-center cursor-pointer hover:bg-[#0880c3] bg-[whitesmoke] border-b-[#e2e2e2] border-b-[2px]'><span className='pl-[15px]'>lorem</span></li>
-                        <li className='flex-1 flex items-center cursor-pointer hover:bg-[#0880c3] bg-[whitesmoke] border-b-[#e2e2e2] border-b-[2px]'><span className='pl-[15px]'>lorem</span></li>
-                        <li className='flex-1 flex items-center cursor-pointer hover:bg-[#0880c3] bg-[whitesmoke] border-b-[#e2e2e2] border-b-[2px]'><span className='pl-[15px]'>lorem</span></li>
-                        <li className='flex-1 flex items-center cursor-pointer hover:bg-[#0880c3] bg-[whitesmoke] border-b-[#e2e2e2] border-b-[2px]'><span className='pl-[15px]'>lorem</span></li>
-                    </ul>
-                    <div className="place-btn w-full flex justify-center pt-[45px]">
-                        <button type='' className='font-bold font-[Oswald] bg-[#0880c3] text-[whitesmoke] border-[black] border-[1px] px-[20px] py-[5px] rounded-[10px] hover:text-[black]'>Suivant</button>
-                    </div>
+                    <form onSubmit={ handleSubmit } className='flex flex-col h-full'>
+
+                        <ul className='flex flex-col h-full'>
+
+                        <li className='flex-1 flex items-center cursor-pointer hover:bg-[#0880c3] bg-[whitesmoke] border-b-[#e2e2e2] border-b-[2px]' onClick={() => handleGenreSelection('action')}>
+                            <span className='pl-[15px]'>Action</span>
+                        </li>
+
+                                
+                            <li className='flex-1 flex items-center cursor-pointer hover:bg-[#0880c3] bg-[whitesmoke] border-b-[#e2e2e2] border-b-[2px]' onClick={() => handleGenreSelection('comedy')}>
+                                    <span className='pl-[15px]'>Comédie</span>
+                            </li>
+
+                            <li className='flex-1 flex items-center cursor-pointer hover:bg-[#0880c3] bg-[whitesmoke] border-b-[#e2e2e2] border-b-[2px]' onClick={() => handleGenreSelection('horror')}>
+                                    <span className='pl-[15px]'>Horreur</span>
+                            </li>
+                            
+                            <li className='flex-1 flex items-center cursor-pointer hover:bg-[#0880c3] bg-[whitesmoke] border-b-[#e2e2e2] border-b-[2px]' onClick={() => handleGenreSelection('romance')}>
+                                    <span className='pl-[15px]'>Romance</span>
+                            </li>
+
+                            <li className='flex-1 flex items-center cursor-pointer hover:bg-[#0880c3] bg-[whitesmoke] border-b-[#e2e2e2] border-b-[2px]' onClick={() => handleGenreSelection('fantastique')}>
+                                    <span className='pl-[15px]'>Fantastique</span>
+                            </li>
+
+                            <li className='flex-1 flex items-center cursor-pointer hover:bg-[#0880c3] bg-[whitesmoke] border-b-[#e2e2e2] border-b-[2px]' onClick={() => handleGenreSelection('science-fi')}>
+                                    <span className='pl-[15px]'>Science-fiction</span>
+                            </li>
+                        </ul>
+
+                        {/* <div className="place-btn w-full flex justify-center pt-[45px]">
+                            <button type='submit' className='font-bold font-[Oswald] bg-[#0880c3] text-[whitesmoke] border-[black] border-[1px] px-[20px] py-[5px] rounded-[10px] hover:text-[black]'>Suivant</button>
+                        </div> */}
+                    </form>
                 </div> 
             </div>
         </div>
